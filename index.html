@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Маршрутный лист: Сеул и Пусан 2025</title>
+    <title>Маршрутный лист: Шанхай → Пусан → Сеул</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
     <style>
@@ -12,108 +12,90 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f9f9f9; /* Lighter background */
+            background-color: #f9f9f9;
         }
-
         .page-container {
-            max-width: 800px; /* Adjusted for better readability */
+            max-width: 800px;
             margin: 2rem auto;
             padding: 2rem;
             background-color: white;
-            border-radius: 12px; /* Softer rounding */
+            border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
-
         .header-bg {
-             background: linear-gradient(to right, #43a2ff, #007aff); /* Apple's blue gradient */
+            background: linear-gradient(to right, #43a2ff, #007aff);
             color: white;
             border-radius: 10px;
-            padding: 1.5rem 1rem; /* Adjusted padding */
-            margin-bottom: 2rem; /* Spacing */
+            padding: 1.5rem 1rem;
+            margin-bottom: 2rem;
         }
-
         .section {
-            margin-bottom: 2.5rem; /* Increased spacing */
+            margin-bottom: 2.5rem;
             padding: 1.5rem;
             border-radius: 10px;
             background-color: #ffffff;
-             border: 1px solid #e5e7eb; /* Subtle border */
+            border: 1px solid #e5e7eb;
         }
-
         .section-header {
             display: flex;
             align-items: center;
             margin-bottom: 1.5rem;
-            font-size: 1.5rem; /* 24px */
+            font-size: 1.5rem;
             font-weight: 600;
-            color: #1d1d1f; /* Apple's dark text color */
+            color: #1d1d1f;
         }
-
         .section-header i {
-             color: #007AFF; /* Accent blue */
-             margin-right: 0.75rem;
-             width: 24px; /* Consistent icon size */
-             text-align: center;
+            color: #007AFF;
+            margin-right: 0.75rem;
+            width: 24px;
+            text-align: center;
         }
-
-
         .day-card {
-            border: 1px solid #e5e7eb; /* Lighter border */
-            border-left: 4px solid #007AFF; /* Accent blue */
+            border: 1px solid #e5e7eb;
+            border-left: 4px solid #007AFF;
             margin-bottom: 1.5rem;
             padding: 1rem 1.5rem;
             border-radius: 8px;
-            background-color: #fdfdff; /* Slightly off-white */
+            background-color: #fdfdff;
         }
-
         .table-header {
-            background-color: #f3f4f6; /* Light gray header */
-            color: #374151; /* Darker gray text */
+            background-color: #f3f4f6;
+            color: #374151;
             font-weight: 600;
         }
-
         .table th, .table td {
-             padding: 0.75rem 1rem; /* Adjusted padding */
-             border-bottom: 1px solid #e5e7eb;
-             vertical-align: middle; /* Align text nicely */
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: middle;
         }
-
         .accent-blue {
             color: #007AFF;
         }
-
         ul.list-disc, ol.list-decimal {
-            padding-left: 1.5rem; /* Consistent list padding */
-             margin-left: 0.5rem;
+            padding-left: 1.5rem;
+            margin-left: 0.5rem;
         }
-
         li {
             margin-bottom: 0.5rem;
         }
-
-         /* Improved link style */
         a.text-link {
-             color: #007AFF;
-             text-decoration: none;
+            color: #007AFF;
+            text-decoration: none;
         }
-         a.text-link:hover {
-             text-decoration: underline;
-         }
-
-         /* Highlight box for important notes like Shanghai transit */
-         .highlight-box {
-             background-color: #eef6ff; /* Light blue background */
-             border-left: 4px solid #007AFF;
-             padding: 1rem;
-             border-radius: 8px;
-             margin-top: 1rem;
-             margin-bottom: 1rem;
-             color: #1d4ed8; /* Darker blue text */
-         }
-         .highlight-box p { margin-bottom: 0.5rem; }
-         .highlight-box p:last-child { margin-bottom: 0; }
-
-
+        a.text-link:hover {
+            text-decoration: underline;
+        }
+        .highlight-box {
+            background-color: #eef6ff;
+            border-left: 4px solid #007AFF;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            color: #1d4ed8;
+        }
+        .highlight-box p { margin-bottom: 0.5rem; }
+        .highlight-box p:last-child { margin-bottom: 0; }
         @media print {
             body { background-color: white; font-size: 10pt; }
             .page-container { box-shadow: none; padding: 0; margin: 0; max-width: 100%; border-radius: 0; }
@@ -132,380 +114,205 @@
     <div class="page-container">
         <!-- Заголовок -->
         <header class="header-bg text-center">
-            <h1 class="text-3xl font-semibold mb-2">🇰🇷 Маршрутный лист: Сеул и Пусан</h1>
-            <p class="text-xl opacity-90">14 – 27 августа 2025 (Вылет из Пусана)</p>
-            <p class="text-sm opacity-80 mt-1">Пересадка в Шанхае 27-28 августа</p>
+            <h1 class="text-3xl font-semibold mb-2">🇰🇷✈️ Маршрутный лист: Шанхай → Пусан → Сеул</h1>
+            <p class="text-xl opacity-90">20 августа — 3 сентября 2025</p>
+            <p class="text-sm opacity-80 mt-1">Обратный рейс через Шанхай</p>
         </header>
 
         <!-- Общие детали поездки -->
         <section class="section">
             <h2 class="section-header"><i class="fas fa-info-circle"></i> Общие детали поездки</h2>
             <ul class="list-disc space-y-2">
-                <li><strong>Период в Корее:</strong> 14 августа (прилет в Сеул) – 27 августа (вылет из Пусана). 14 ночей / 14 дней в Корее.</li>
-                <li><strong>Локации:</strong> Сеул (11 ночей), Пусан (3 ночи)</li>
-                <li><strong>Пересадка:</strong> Длительная (18ч 40м) в Шанхае (PVG) 27-28 августа с возможностью выхода в город (144ч безвизовый транзит).</li>
-                <li><strong>Бюджет на жилье:</strong> до $43 в сутки (~$600 за 14 ночей)</li>
-                <li><strong>Примерный бюджет на день (Корея):</strong> ~$70-80 на двоих (еда, транспорт, развлечения)</li>
-                <li><strong>Интересы:</strong> K-pop, фото-видео съемка, моушен дизайн, аниме, фильмы, не очень острая еда</li>
+                <li><strong>Период:</strong> 20 августа (прилет в Шанхай) – 3 сентября (вылет из Сеула). 14 ночей / 15 дней.</li>
+                <li><strong>Локации:</strong> Шанхай (1 ночь), Пусан (3 ночи), Сеул (10 ночей)</li>
+                <li><strong>Бюджет на человека:</strong> 150 000 ₽</li>
+                <li><strong>Авиабилеты:</strong> 65 500 ₽/чел (СПб → Шанхай → Пусан → Шанхай → Сеул → Шанхай → СПб)</li>
+                <li><strong>Остаток на проживание и расходы:</strong> 84 500 ₽/чел</li>
+                <li><strong>Интересы:</strong> K-pop, фото-видео съемка, аниме, фильмы, не очень острая еда</li>
             </ul>
         </section>
 
         <!-- Бюджет -->
         <section class="section">
-            <h2 class="section-header"><i class="fas fa-wallet"></i> Примерный бюджет (на двоих, без авиа до/из Кореи)</h2>
+            <h2 class="section-header"><i class="fas fa-wallet"></i> Примерный бюджет (на человека)</h2>
             <div class="overflow-x-auto">
                 <table class="min-w-full bg-white table">
-                    <thead><tr class="table-header"><th class="text-left">Категория</th><th class="text-left">Сумма на двоих</th><th class="text-left">Комментарий</th></tr></thead>
+                    <thead><tr class="table-header"><th class="text-left">Категория</th><th class="text-left">Сумма</th><th class="text-left">Комментарий</th></tr></thead>
                     <tbody>
-                        <tr><td>Жилье (14 ночей)</td><td class="font-semibold">$600</td><td>~11 ночей Сеул + ~3 ночи Пусан по ~$43/ночь</td></tr>
-                        <tr><td>Еда, транспорт, развлечения (Корея)</td><td class="font-semibold">$950 - $1150</td><td>Сеул (~$700-850) + Пусан (~$250-300, вкл. KTX)</td></tr>
-                        <tr class="bg-gray-50 font-semibold"><td>ВСЕГО (Корея)</td><td class="accent-blue text-lg">$1550 - $1750</td><td>~$110-125 / день на двоих в Корее</td></tr>
-                        <tr><td>Доп. расходы (Шанхай)</td><td class="font-semibold">$50 - $150</td><td>Транспорт, еда, опц. ночлег во время пересадки</td></tr>
-                         <tr class="bg-gray-100 font-bold"><td>ИТОГО (Приблизительно)</td><td class="accent-blue text-xl">$1600 - $1900</td><td>Общий ориентир без авиа СПб-Корея-СПб</td></tr>
+                        <tr><td>Авиабилеты</td><td class="font-semibold">65 500 ₽</td><td>СПб → Шанхай → Пусан → Шанхай → Сеул → Шанхай → СПб</td></tr>
+                        <tr><td>Шанхай (1 ночь)</td><td class="font-semibold">5 000 ₽</td><td>Отель + еда + музеи</td></tr>
+                        <tr><td>Пусан (3 ночи)</td><td class="font-semibold">14 000 ₽</td><td>6 000 ₽ жилье + 8 000 ₽ еда/развлечения</td></tr>
+                        <tr><td>Поезд Пусан-Сеул</td><td class="font-semibold">4 500 ₽</td><td>Билет на 1 человека</td></tr>
+                        <tr><td>Сеул (10 ночей)</td><td class="font-semibold">28 000 ₽</td><td>Жилье</td></tr>
+                        <tr><td>Еда и развлечения (Сеул)</td><td class="font-semibold">32 500 ₽</td><td>3 250 ₽ в день</td></tr>
+                        <tr class="bg-gray-50 font-semibold"><td>ВСЕГО</td><td class="accent-blue text-lg">149 500 ₽</td><td>Остаток 500 ₽ на мелкие расходы</td></tr>
                     </tbody>
                 </table>
-                 <p class="text-sm text-gray-600 mt-3">*Без учета стоимости основных авиабилетов и крупного шоппинга.</p>
+                <p class="text-sm text-gray-600 mt-3">*Без учета шоппинга и непредвиденных расходов.</p>
             </div>
         </section>
 
         <!-- Рекомендации по жилью -->
         <section class="section">
-             <h2 class="section-header"><i class="fas fa-bed"></i> Рекомендации по жилью</h2>
-             <h3 class="text-lg font-semibold mb-3">Сеул (11 ночей):</h3>
-             <p class="mb-4">Рекомендуемый район: **Mangwon / Hongdae (Mapo-gu)**. Искать на Airbnb, Booking, Agoda (гестхаусы, апарт-отели, квартиры).</p>
-             <h3 class="text-lg font-semibold mb-3 mt-4">Пусан (3 ночи):</h3>
-             <p class="mb-2">Рекомендуемые районы:</p>
-             <ul class="list-disc space-y-1 my-2 text-sm">
-                 <li>**Haeundae:** У пляжа, много отелей/ресторанов, может быть дороже.</li>
-                 <li>**Seomyeon:** Центр, транспортный узел, шоппинг, кафе, жилье разной цены.</li>
-                 <li>**Nampo-dong:** У рынка Jagalchi, BIFF Square, удобно для этой части города.</li>
-             </ul>
-             <p class="text-sm">Ищите гестхаусы, мотели или Airbnb в бюджете (~$43/ночь). Бронируйте заранее.</p>
-              <h3 class="font-semibold mt-4 mb-2 text-base">Что важно проверить (везде):</h3>
-             <ul class="list-disc space-y-1 text-sm">
+            <h2 class="section-header"><i class="fas fa-bed"></i> Рекомендации по жилью</h2>
+            <h3 class="text-lg font-semibold mb-3">Шанхай (1 ночь):</h3>
+            <p class="mb-4">Рекомендуемый район: **Пудун (Pudong)** рядом с аэропортом или **Набережная Вайтань (The Bund)** для культурного погружения. Искать отели с трансфером в аэропорт.</p>
+
+            <h3 class="text-lg font-semibold mb-3 mt-4">Пусан (3 ночи):</h3>
+            <p class="mb-2">Рекомендуемые районы:</p>
+            <ul class="list-disc space-y-1 my-2 text-sm">
+                <li><strong>Seomyeon:</strong> Центр, транспортный узел, шоппинг, кафе.</li>
+                <li><strong>Haeundae:</strong> У пляжа, но дороже.</li>
+            </ul>
+            <p class="text-sm">Ищите гестхаусы или мини-отели в бюджете (~6 000 ₽ на 3 ночи).</p>
+
+            <h3 class="text-lg font-semibold mb-3 mt-4">Сеул (10 ночей):</h3>
+            <p class="mb-2">Рекомендуемый район: **Mangwon / Hongdae (Mapo-gu)**. Искать на Airbnb, Booking, Agoda (гестхаусы, апарт-отели).</p>
+            <h3 class="font-semibold mt-4 mb-2 text-base">Что важно проверить (везде):</h3>
+            <ul class="list-disc space-y-1 text-sm">
                 <li>Близость к метро (до 10 мин пешком).</li>
-                <li>Оценка не ниже 8.0.</li>
-                <li>Наличие: кондиционер, Wi-Fi, стиральная машина, кухня/мини-кухня.</li>
+                <li>Наличие: Wi-Fi, кондиционер, кухня.</li>
             </ul>
         </section>
 
         <!-- Транспорт -->
         <section class="section">
-             <h2 class="section-header"><i class="fas fa-subway"></i> Транспорт</h2>
-             <h3 class="text-lg font-semibold mb-3">Сеул:</h3>
-             <ul class="list-disc space-y-1 mb-4 text-sm">
-                 <li>Аэропорт ICN ↔ Город: AREX Express/All-Stop, Автобус-лимузин.</li>
-                 <li>Городской: Метро, Автобусы (T-money/Cashbee), Такси (Kakao Taxi).</li>
-                 <li>Навигация: Naver Map / KakaoMap.</li>
-             </ul>
-             <h3 class="text-lg font-semibold mb-3">Сеул → Пусан:</h3>
-             <ul class="list-disc space-y-1 mb-4 text-sm">
-                 <li>**KTX (Рекомендуется):** ~2.5-3 часа, ~₩60,000 (~$45-50) с чел. Бронировать заранее (Let's Korail, Klook).</li>
-                 <li>Автобус: ~4-5 часов, ~₩30,000-40,000 (~$25-35) с чел.</li>
-             </ul>
-             <h3 class="text-lg font-semibold mb-3">Пусан:</h3>
-             <ul class="list-disc space-y-1 text-sm">
-                 <li>Городской: Метро (4 линии), Автобусы (T-money/Cashbee работают).</li>
-                 <li>Транспорт в аэропорт Кимхэ (PUS): Метро (с пересадкой) или автобус-лимузин.</li>
-             </ul>
+            <h2 class="section-header"><i class="fas fa-subway"></i> Транспорт</h2>
+            <h3 class="text-lg font-semibold mb-3">Шанхай:</h3>
+            <ul class="list-disc space-y-1 mb-4 text-sm">
+                <li>Аэропорт PVG → Город: метро линия 2 (~50 CNY) или маглев (~140 CNY).</li>
+                <li>Городской: метро, такси, велосипеды.</li>
+            </ul>
+            <h3 class="text-lg font-semibold mb-3">Пусан:</h3>
+            <ul class="list-disc space-y-1 mb-4 text-sm">
+                <li>Городской: метро, автобусы.</li>
+                <li>Аэропорт Кимхэ (PUS): метро или автобус-лимузин.</li>
+            </ul>
+            <h3 class="text-lg font-semibold mb-3">Пусан → Сеул:</h3>
+            <ul class="list-disc space-y-1 mb-4 text-sm">
+                <li>Поезд (~4 500 ₽/чел, ~4 часа).</li>
+                <li>Бронировать заранее (Korail, Klook).</li>
+            </ul>
         </section>
 
         <!-- Питание -->
         <section class="section">
-             <h2 class="section-header"><i class="fas fa-utensils"></i> Питание</h2>
-             <p class="mb-4">Основные принципы (уличная еда, Kimbap Cheonguk, convenience stores) и неострые блюда (Пулькоги, Кимбап, Манду, Самгетан и т.д.) актуальны для обоих городов. Ориентир ~$15-25/чел в день.</p>
-             <h3 class="text-lg font-semibold mb-3">Особенности Пусана:</h3>
-             <ul class="list-disc space-y-2 mb-4 text-sm">
-                 <li>**Рынок Чагальчи (Jagalchi Market):** Свежие морепродукты (выбрать и приготовить).</li>
-                 <li>**BIFF Square:** Уличная еда (хотток - сладкая лепешка, токпокки).</li>
-                 <li>**Двэджи Кукпап (돼지국밥):** Знаменитый пусанский суп со свининой и рисом.</li>
-                 <li>**Мильмён (밀면):** Холодная пшеничная лапша (пусанский специалитет).</li>
-             </ul>
-             <p class="text-sm text-gray-600 mt-3">Просите **"ан мэп-ге хэ джусэё" (안 맵게 해주세요)** - "сделайте не остро, пожалуйста".</p>
+            <h2 class="section-header"><i class="fas fa-utensils"></i> Питание</h2>
+            <p class="mb-4">Ориентир: 3 250 ₽/день на человека в Сеуле. В Пусане: 8 000 ₽ за 3 дня.</p>
+            <h3 class="text-lg font-semibold mb-3">Рекомендации:</h3>
+            <ul class="list-disc space-y-2 text-sm">
+                <li>**Шанхай:** Dumplings, soup noodles, street food.</li>
+                <li>**Пусан:** Рынок Чагальчи, BIFF Square, Dweji Gukbap.</li>
+                <li>**Сеул:** Kimbap, Mandu, non-spicy Korean BBQ.</li>
+            </ul>
+            <p class="text-sm text-gray-600 mt-3">Просите «ан мэп-ге хэ джусэё» (не остро).</p>
         </section>
 
         <!-- Ежедневный план -->
         <section class="section">
-             <h2 class="section-header"><i class="fas fa-calendar-alt"></i> Ежедневный план (Сеул + Пусан)</h2>
-            <p class="text-sm text-gray-600 mb-4">*Бюджеты указаны примерно на двоих на день в Корее.</p>
+            <h2 class="section-header"><i class="fas fa-calendar-alt"></i> Ежедневный план</h2>
+            <p class="text-sm text-gray-600 mb-4">*Бюджеты указаны на человека.</p>
 
             <!-- День 1 -->
             <div class="day-card">
-                <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 1 (14 авг, ср) — Прилет, заселение, Mangwon</h3>
+                <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 1 (20 авг, ср) — Прилет в Шанхай</h3>
                 <ul class="list-disc space-y-1 text-sm">
-                    <li>**17:25** — Прилёт в ICN. Трансфер в жилье (Mangwon). Покупка T-money.</li>
-                    <li>Заселение, отдых.</li>
-                    <li>Вечерняя прогулка: **Mangwon Hangang Park**. Ужин на **Mangwon Market** или рядом.</li>
-                 </ul>
-                <p class="mt-2 text-sm font-medium">Бюджет дня (на двоих): ~ $25–30</p>
+                    <li>**11:25** — Прилёт в PVG. Трансфер в отель.</li>
+                    <li>Прогулка по The Bund.</li>
+                    <li>Ужин в районе Nanjing Road.</li>
+                </ul>
+                <p class="mt-2 text-sm font-medium">Бюджет: ~5 000 ₽</p>
             </div>
 
             <!-- День 2 -->
             <div class="day-card">
-                 <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 2 (15 авг, чт) — Hongdae Exploration</h3>
+                <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 2 (21 авг, чт) — Вылет в Пусан</h3>
                 <ul class="list-disc space-y-1 text-sm">
-                     <li>Завтрак. Прогулка по **Hongdae**: уличные выступления, магазины, кафе.</li>
-                     <li>Опционально: **Trick Eye Museum** / Alive Museum (~$15-20/чел) или кафе с животными (~$10/чел).</li>
-                     <li>Ужин: уличная еда или Korean BBQ в Hongdae.</li>
-                 </ul>
-                <p class="mt-2 text-sm font-medium">Бюджет дня: ~ $70–80</p>
+                    <li>Трансфер в аэропорт PVG.</li>
+                    <li>**17:50** — Вылет в Пусан (PUS).</li>
+                    <li>**21:20** — Прилёт в PUS. Заселение.</li>
+                </ul>
+                <p class="mt-2 text-sm font-medium">Бюджет: ~0 ₽ (билеты уже оплачены)</p>
             </div>
 
-             <!-- День 3 -->
+            <!-- День 3 -->
             <div class="day-card">
-                 <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 3 (16 авг, пт) — Дворцы и Традиции</h3>
+                <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 3 (22 авг, пт) — Пусан: Gamcheon & Jagalchi</h3>
                 <ul class="list-disc space-y-1 text-sm">
-                     <li>Дворец **Gyeongbokgung** (вход ~3,000 KRW/чел).</li>
-                     <li>Прогулка по **Bukchon Hanok Village**.</li>
-                     <li>Улица **Insadong**: сувениры, галереи, чайные.</li>
-                     <li>Ужин в районе Jongno / Insadong.</li>
-                 </ul>
-                <p class="mt-2 text-sm font-medium">Бюджет дня: ~ $60–70</p>
+                    <li>**Gamcheon Culture Village**.</li>
+                    <li>**Jagalchi Market** + морепродукты.</li>
+                    <li>BIFF Square вечером.</li>
+                </ul>
+                <p class="mt-2 text-sm font-medium">Бюджет: ~2 700 ₽</p>
             </div>
 
-             <!-- День 4 -->
+            <!-- День 4 -->
             <div class="day-card">
-                 <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 4 (17 авг, сб) — Namsan Tower + Myeongdong</h3>
+                <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 4 (23 авг, сб) — Пусан: Храмы и пляжи</h3>
                 <ul class="list-disc space-y-1 text-sm">
-                     <li>Подъём на **Namsan Tower** (фуникулёр ~₩14k/2 чел, вход на башню опц. ~₩16k/чел).</li>
-                     <li>**Myeongdong**: шоппинг, уличная еда.</li>
-                     <li>Вечер: Ручей **Cheonggyecheon Stream**.</li>
-                     <li>Ужин в Myeongdong.</li>
-                 </ul>
-                 <p class="mt-2 text-sm font-medium">Бюджет дня: ~ $80–100 (если с башней)</p>
+                    <li>**Haedong Yonggungsa Temple**.</li>
+                    <li>**Haeundae Beach**.</li>
+                    <li>Ужин в Seomyeon.</li>
+                </ul>
+                <p class="mt-2 text-sm font-medium">Бюджет: ~2 700 ₽</p>
             </div>
 
-             <!-- День 5 -->
+            <!-- День 5 -->
             <div class="day-card">
-                 <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 5 (18 авг, вс) — Релакс и Парк Yeouido</h3>
+                <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 5 (24 авг, вс) — Поезд в Сеул</h3>
                 <ul class="list-disc space-y-1 text-sm">
-                     <li>Поздний завтрак. Парк **Yeouido Hangang Park**: прогулка, пикник.</li>
-                     <li>Опционально: ТЦ **The Hyundai Seoul** / IFC Mall рядом.</li>
-                     <li>Опционально: Корейская баня **Jjimjilbang** (~$15-20/чел).</li>
-                     <li>Легкий ужин.</li>
-                 </ul>
-                 <p class="mt-2 text-sm font-medium">Бюджет дня: ~ $60–70 (если с баней)</p>
+                    <li>Выселение.</li>
+                    <li>**08:00** — Поезд Пусан-Сеул (~4 500 ₽).</li>
+                    <li>**12:00** — Прибытие в Сеул. Заселение.</li>
+                    <li>Прогулка в районе Hongdae.</li>
+                </ul>
+                <p class="mt-2 text-sm font-medium">Бюджет: ~4 500 ₽</p>
             </div>
 
-             <!-- День 6 -->
+            <!-- День 6-15 -->
             <div class="day-card">
-                 <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 6 (19 авг, пн) — Парк развлечений Everland 🎢</h3>
+                <h3 class="text-lg font-semibold accent-blue mb-2">📆 Дни 6–15 (25 авг – 3 сент) — Сеул</h3>
                 <ul class="list-disc space-y-1 text-sm">
-                     <li>Ранний выезд в **Everland** (Автобус, ~1 час).</li>
-                     <li>Билеты: ~₩50-60k/чел (купить онлайн заранее).</li>
-                     <li>Весь день в парке (аттракционы, зоопарк, сады). Обед/перекусы внутри.</li>
-                 </ul>
-                 <p class="mt-2 text-sm font-medium">Бюджет дня: ~ $150–180 (основное - билеты)</p>
+                    <li>**Культурные дни:** дворцы, музеи, Namsan Tower.</li>
+                    <li>**Развлечения:** Everland, K-pop музеи.</li>
+                    <li>**Фото-локации:** Bukchon Hanok Village, Starfield Library.</li>
+                    <li>**Свободный график:** адаптируйте под интересы.</li>
+                </ul>
+                <p class="mt-2 text-sm font-medium">Ежедневный бюджет: ~3 250 ₽</p>
             </div>
 
-             <!-- День 7 -->
-            <div class="day-card">
-                 <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 7 (20 авг, вт) — Дизайн DDP и Ночной Dongdaemun</h3>
+            <!-- День 16 -->
+            <div class="day-card bg-blue-50 border-l-blue-500">
+                <h3 class="text-lg font-semibold accent-blue mb-2">✈️ День 16 (3 сент, пн) — Вылет из Сеула</h3>
                 <ul class="list-disc space-y-1 text-sm">
-                     <li>**Dongdaemun Design Plaza (DDP)**: архитектура, выставки, шопы.</li>
-                     <li>Вечер: **Dongdaemun Night Market** (шоппинг).</li>
-                     <li>Ужин: уличная еда / фуд-корты.</li>
-                 </ul>
-                 <p class="mt-2 text-sm font-medium">Бюджет дня: ~ $50–60</p>
+                    <li>Завтрак. Прогулка.</li>
+                    <li>**17:50** — Вылет из ICN (через Шанхай в СПб).</li>
+                </ul>
+                <p class="mt-2 text-sm font-medium">Бюджет: ~0 ₽ (билеты уже оплачены)</p>
             </div>
-
-             <!-- День 8 -->
-            <div class="day-card">
-                 <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 8 (21 авг, ср) — Поездка в Suwon (крепость Hwaseong)</h3>
-                <ul class="list-disc space-y-1 text-sm">
-                     <li>Электричка до **Suwon** (~1 час).</li>
-                     <li>Крепость **Hwaseong Fortress** (ЮНЕСКО, вход ~₩2k/чел). Прогулка по стенам.</li>
-                     <li>Обед в Сувоне. Возвращение в Сеул.</li>
-                 </ul>
-                 <p class="mt-2 text-sm font-medium">Бюджет дня: ~ $50–60</p>
-            </div>
-
-             <!-- День 9 -->
-            <div class="day-card">
-                 <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 9 (22 авг, чт) — K-Pop Day 🎤 (Gangnam)</h3>
-                <ul class="list-disc space-y-1 text-sm">
-                     <li>Поездка в **Gangnam**.</li>
-                     <li>Опционально: **HYBE Insight Museum** / SMTOWN@coexartium (проверить статус, билеты ~$20-25/чел).</li>
-                     <li>Прогулка по **K-Star Road**.</li>
-                     <li>**COEX Mall** и **Starfield Library**.</li>
-                     <li>Магазины K-pop мерча. Тематическое кафе/ужин.</li>
-                 </ul>
-                 <p class="mt-2 text-sm font-medium">Бюджет дня: ~ $80–100 (если с музеем)</p>
-            </div>
-
-             <!-- День 10 -->
-            <div class="day-card">
-                 <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 10 (23 авг, пт) — Itaewon + Naksan Park Views</h3>
-                <ul class="list-disc space-y-1 text-sm">
-                     <li>**Itaewon**: интернациональная атмосфера, шопинг, обед.</li>
-                     <li>Во второй половине дня: **Naksan Park** (виды на закате) и **Ihwa Mural Village**.</li>
-                     <li>Ужин в районе Hyehwa / Hongdae.</li>
-                 </ul>
-                 <p class="mt-2 text-sm font-medium">Бюджет дня: ~ $60–70</p>
-            </div>
-
-             <!-- День 11 -->
-            <div class="day-card">
-                 <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 11 (24 авг, сб) — Сеул: Свободный день / Интересы / Сборы</h3>
-                 <ul class="list-disc space-y-1 text-sm">
-                     <li>Посещение мест по интересам (Аниме, Моушен Дизайн, Музеи - см. раздел Интересы).</li>
-                     <li>Или возврат в любимые районы, шоппинг сувениров.</li>
-                     <li>Подготовка к переезду в Пусан.</li>
-                     <li>Опционально: Вечерний круиз по реке Ханган (~₩15-25k/чел).</li>
-                 </ul>
-                 <p class="mt-2 text-sm font-medium">Бюджет дня: ~ $50–80</p>
-            </div>
-
-            <!-- День 12 -->
-            <div class="day-card">
-                 <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 12 (25 авг, вс) — Переезд в Пусан, Пляж Хэундэ</h3>
-                <ul class="list-disc space-y-1 text-sm">
-                     <li>Утром: Выселение из Сеула. Поездка на **KTX Сеул → Пусан**.</li>
-                     <li>Прибытие, заселение в Пусане. Обед.</li>
-                     <li>Вечер: Пляж **Haeundae Beach**, набережная, ужин.</li>
-                 </ul>
-                <p class="mt-2 text-sm font-medium">Бюджет дня: ~ $140–160 (включая KTX ~ $90-100)</p>
-            </div>
-
-             <!-- День 13 -->
-            <div class="day-card">
-                 <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 13 (26 авг, пн) — Культурный и Рыбный Пусан</h3>
-                <ul class="list-disc space-y-1 text-sm">
-                     <li>Утро: **Gamcheon Culture Village**.</li>
-                     <li>День: **Jagalchi Market**, обед морепродуктами. Рядом - **BIFF Square**.</li>
-                     <li>Опционально (выбрать 1): **Taejongdae Park** ИЛИ храм **Haedong Yonggungsa**.</li>
-                     <li>Вечер: Прогулка/ужин в **Seomyeon** или **Nampo-dong**.</li>
-                 </ul>
-                <p class="mt-2 text-sm font-medium">Бюджет дня: ~ $70–80</p>
-            </div>
-
-             <!-- День 14 -->
-            <div class="day-card">
-                 <h3 class="text-lg font-semibold accent-blue mb-2">📆 День 14 (27 авг, вт) — Утро в Пусане, Вылет</h3>
-                <ul class="list-disc space-y-1 text-sm">
-                     <li>Утро: Последняя прогулка, сувениры, завтрак.</li>
-                     <li>Сборы, выселение. Обед.</li>
-                     <li>Трансфер в аэропорт **Кимхэ (PUS)** (~3.5-4ч до вылета).</li>
-                     <li>**17:50** — Вылет из Пусана (PUS) в Шанхай (PVG).</li>
-                 </ul>
-                 <p class="mt-2 text-sm font-medium">Бюджет дня: ~ $40–50 (вкл. трансфер в аэропорт)</p>
-            </div>
-
-             <!-- День 15 -->
-             <div class="day-card bg-blue-50 border-l-blue-500">
-                 <h3 class="text-lg font-semibold accent-blue mb-2">✈️ День 15 (28 авг, ср) — Шанхай (Пересадка) и Прилет домой</h3>
-                 <ul class="list-disc space-y-1 text-sm">
-                     <li>Ночь/Утро: Прибытие в Шанхай (PVG), **144ч безвизовый транзит**.</li>
-                     <li>**~18 часов пересадки:** Отдых в отеле/аэропорту ИЛИ мини-вылазка в центр (The Bund).</li>
-                     <li>Возвращение в аэропорт PVG (~3ч до вылета). Вылет.</li>
-                     <li>**19:05** — Прибытие в Санкт-Петербург (LED).</li>
-                 </ul>
-                  <p class="mt-2 text-sm font-medium">Бюджет дня: ~ $50–150 (на двоих, Шанхай)</p>
-             </div>
         </section>
 
-         <!-- Шанхайская пересадка - Детали -->
+        <!-- Шанхайская пересадка -->
         <section class="section">
-             <h2 class="section-header"><i class="fas fa-city"></i> Шанхайская пересадка (18ч 40м) - Детали</h2>
-             <div class="highlight-box">
-                 <p class="font-semibold mb-2">✅ Безвизовый транзит (144 часа) доступен для граждан РФ.</p>
-                 <p class="text-sm">На специальной стойке транзитной иммиграции покажите паспорт и билет на рейс в СПб.</p>
-             </div>
-             <h4 class="font-semibold mb-2 mt-4">Варианты времяпрепровождения:</h4>
-             <ul class="list-disc space-y-2 text-sm">
-                 <li><strong>Сон:</strong> Рекомендуется! Аэропортовые отели (Da Zhong Airport Hotel), капсулы, зоны отдыха.</li>
-                 <li><strong>Транспорт в город:</strong> Maglev (быстро, ~50 CNY) до Longyang Rd + метро; Метро линия 2 (дешево, ~7-8 CNY, дольше).</li>
-                 <li><strong>Куда съездить (если есть силы):</strong> Набережная Вайтань (The Bund) и Нанкинская улица (Nanjing Road).</li>
-                 <li><strong>Деньги:</strong> Юани (CNY). Обмен в аэропорту / снятие в банкомате.</li>
-                 <li><strong>Багаж:</strong> Уточните в Пусане, что его регистрируют до СПб!</li>
-             </ul>
-             <p class="text-sm text-red-600 mt-3 font-medium">❗ Не переусердствуйте. Учитывайте усталость и время на дорогу/контроль.</p>
-        </section>
-
-         <!-- Места для фото (Сеул + Пусан) -->
-        <section class="section">
-             <h2 class="section-header"><i class="fas fa-camera-retro"></i> Места для фото / видео</h2>
-             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                 <div>
-                     <h3 class="font-semibold mb-2">Сеул:</h3>
-                     <ul class="list-disc text-sm space-y-1">
-                         <li>Bukchon Hanok Village</li>
-                         <li>Дворцы (Gyeongbokgung и др.)</li>
-                         <li>Starfield Library (COEX)</li>
-                         <li>Dongdaemun Design Plaza (DDP)</li>
-                         <li>N Seoul Tower / Namsan Park</li>
-                         <li>Ihwa Mural Village / Naksan Park</li>
-                         <li>Парки у реки Ханган</li>
-                         <li>Common Ground (контейнеры)</li>
-                         <li>Район Hongdae</li>
-                         <li>Район Seongsu-dong</li>
-                     </ul>
-                 </div>
-                 <div>
-                     <h3 class="font-semibold mb-2">Пусан:</h3>
-                     <ul class="list-disc text-sm space-y-1">
-                         <li>Gamcheon Culture Village</li>
-                         <li>Haeundae Beach & The Bay 101 (ночь)</li>
-                         <li>Gwangalli Beach & Gwangan Bridge (ночь)</li>
-                         <li>Haedong Yonggungsa Temple</li>
-                         <li>Taejongdae Park (скалы, маяк)</li>
-                         <li>Oryukdo Skywalk</li>
-                         <li>Jagalchi Market (колорит)</li>
-                     </ul>
-                 </div>
-             </div>
-        </section>
-
-        <!-- Интересы: K-Pop, Аниме, Кино, Дизайн -->
-        <section class="section">
-            <h2 class="section-header"><i class="fas fa-star"></i> Интересы: K-Pop, Аниме, Кино, Дизайн</h2>
-            <h4 class="font-semibold mb-2 text-base">Сеул:</h4>
-            <ul class="list-disc text-sm space-y-1 mb-3">
-                <li>**K-Pop:** HYBE Insight (проверить), K-Star Road, COEX Artium (проверить), магазины в Hongdae/Myeongdong, здания агентств (снаружи).</li>
-                <li>**Аниме:** Animate (Hongdae), Kukje Electronics Centre (Nambu Bus Terminal).</li>
-                <li>**Кино:** Digital Media City (DMC), локации K-Drama.</li>
-                <li>**Дизайн/Искусство:** DDP, ARTE MUSEUM, SeMA, Samsung D'light (проверить).</li>
+            <h2 class="section-header"><i class="fas fa-city"></i> Шанхайская пересадка</h2>
+            <div class="highlight-box">
+                <p class="font-semibold mb-2">✅ Безвизовый транзит (144 часа) для граждан РФ.</p>
+                <p class="text-sm">Покажите билет на рейс в СПб при прохождении иммиграции.</p>
+            </div>
+            <h4 class="font-semibold mb-2 mt-4">Рекомендации:</h4>
+            <ul class="list-disc space-y-2 text-sm">
+                <li>**Трансфер:** Maglev или метро до центра.</li>
+                <li>**Места:** The Bund, Yu Garden, Nanjing Road.</li>
+                <li>**Деньги:** юани (CNY). Обмен в аэропорту или банкоматах.</li>
             </ul>
-             <h4 class="font-semibold mb-2 text-base">Пусан:</h4>
-             <ul class="list-disc text-sm space-y-1">
-                 <li>**Кино:** Busan Cinema Center (место BIFF), локации съемок.</li>
-                 <li>**Искусство:** Busan Museum of Art.</li>
-             </ul>
-        </section>
-
-        <!-- Полезные советы -->
-        <section class="section">
-            <h2 class="section-header"><i class="fas fa-lightbulb"></i> Полезные советы</h2>
-            <ol class="list-decimal space-y-3 text-sm">
-                 <li><strong>Интернет:</strong> Wi-Fi egg (роутер) или eSIM/SIM-карта (KT, SKT, LG U+).</li>
-                 <li><strong>Навигация:</strong> Naver Map / KakaoMap (Google Maps ограничен).</li>
-                 <li><strong>Переводчик:</strong> Papago (от Naver) для корейского.</li>
-                 <li><strong>T-money/Cashbee:</strong> Нужна 1 карта на чел. Пополнять в метро/конビニ. Прикладывать на ВХОДЕ и ВЫХОДЕ.</li>
-                 <li><strong>Розетки:</strong> Тип F (евро), 220В.</li>
-                 <li><strong>Вода:</strong> Покупать бутилированную / использовать кулеры.</li>
-                 <li><strong>Мусор:</strong> Урн мало, носить с собой. Сортировка обязательна.</li>
-                 <li><strong>Чаевые:</strong> Не приняты.</li>
-             </ol>
-        </section>
-
-        <!-- Дополнительная информация -->
-        <section class="section">
-            <h2 class="section-header"><i class="fas fa-book-open"></i> Дополнительная информация</h2>
-            <ul class="space-y-2 text-sm">
-                 <li><strong>Экстренные номера:</strong> 112 (Полиция), 119 (Скорая/Пожарные).</li>
-                 <li><strong>Туристическая информация (звонок):</strong> 1330 (многоязычная поддержка).</li>
-                 <li><strong>Посольство РФ (Сеул):</strong> +82-2-318-2116 (уточнить).</li>
-                 <li><strong>Сайты:</strong> <a href="https://english.visitseoul.net" target="_blank" class="text-link">Visit Seoul</a>, <a href="https://www.visitbusan.net/en" target="_blank" class="text-link">Visit Busan</a>, <a href="https://english.visitkorea.or.kr" target="_blank" class="text-link">Visit Korea</a></li>
-             </ul>
         </section>
 
         <!-- Заключение -->
         <section class="text-center italic text-gray-600 mt-6 text-sm">
-            <p>Этот маршрутный лист объединяет Сеул и Пусан, учитывая вашу логистику и интересы. Шанхайская пересадка — дополнительное приключение! Будьте гибкими и наслаждайтесь поездкой!</p>
+            <p>Этот маршрутный лист объединяет Шанхай, Пусан и Сеул, учитывая вашу логистику и интересы. Будьте гибкими и наслаждайтесь поездкой!</p>
         </section>
-
         <footer class="mt-10 text-center text-gray-500 text-xs">
-            <p>© 2025 Маршрутный лист Сеул-Пусан-Шанхай</p>
+            <p>© 2025 Маршрутный лист Шанхай-Пусан-Сеул</p>
         </footer>
     </div>
 </body>
